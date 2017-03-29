@@ -2,6 +2,8 @@ package com.abnormallydriven.java8features;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -88,4 +90,18 @@ public class LambdaSamples {
                 s -> new StringBuilder(s).reverse().toString();
 
     }
+
+    @Test
+    public void simpleStreamSample(){
+        List<String> wordList = new ArrayList<>();
+
+        wordList.add("Hello");
+        wordList.add("Stream");
+        wordList.add("World");
+
+        wordList.stream()
+                .forEach(System.out::println);
+
+    }
+
 }
